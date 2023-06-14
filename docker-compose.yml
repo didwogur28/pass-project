@@ -9,8 +9,8 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_DATABASE=pass_local
-      - MYSQL_USER=pass_local_user
-      - MYSQL_PASSWORD=passlocal123
-      - MYSQL_ROOT_PASSWORD=passlocal123
+      - MYSQL_DATABASE=pass_db
+      - MYSQL_USER=pass_user
+      - MYSQL_PASSWORD=1234
+      - MYSQL_ROOT_PASSWORD=1234
       - TZ=Asia/Seoul
