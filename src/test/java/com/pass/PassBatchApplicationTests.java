@@ -14,8 +14,7 @@ import org.springframework.test.context.ActiveProfiles;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 @Slf4j
 @SpringBootTest
@@ -82,6 +81,22 @@ class PassBatchApplicationTests {
 		assertEquals(1, updateCount);
 		assertEquals(30, updatedPackageEntity.getCount());
 		assertEquals(120, updatedPackageEntity.getPeriod());
+	}
+
+	@Test
+	public void test_delete() {
+
+		// given
+		PackageEntity packageEntity = new PackageEntity();
+		packageEntity.setPackageName("제거할 이용권");
+		packageEntity.setCount(1);
+		PackageEntity newPackageEntity = packageRepository.save(packageEntity);
+
+		// when
+		packageRepository.deleteById(newPackageEntity.getPackageSeq());
+
+		// then
+		assertTrue(packageRepository.findById(newPackageEntity.getPackageSeq()).isEmpty());
 	}
 
 }
