@@ -2,6 +2,7 @@ package com.pass.job.statistics;
 
 import com.pass.repository.statistics.AggregatedStatistics;
 import com.pass.repository.statistics.StatisticsRepository;
+import com.pass.util.CustomCSVWriter;
 import com.pass.util.LocalDateTimeUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.StepContribution;
