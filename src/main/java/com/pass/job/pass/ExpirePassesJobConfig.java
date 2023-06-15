@@ -1,4 +1,4 @@
-package com.pass.config.job.pass;
+package com.pass.job.pass;
 
 import com.pass.repository.pass.PassEntity;
 import com.pass.repository.pass.PassStatus;
@@ -90,6 +90,5 @@ public class ExpirePassesJobConfig {
                 .entityManagerFactory(entityManagerFactory)
                 .build();
     }
-
 
 }

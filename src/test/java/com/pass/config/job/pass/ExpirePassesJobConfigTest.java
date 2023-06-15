@@ -1,6 +1,7 @@
 package com.pass.config.job.pass;
 
 import com.pass.config.job.config.TestBatchConfig;
+import com.pass.job.pass.ExpirePassesJobConfig;
 import com.pass.repository.pass.PassEntity;
 import com.pass.repository.pass.PassRepository;
 import com.pass.repository.pass.PassStatus;
