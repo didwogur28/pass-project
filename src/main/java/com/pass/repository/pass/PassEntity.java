@@ -1,6 +1,6 @@
 package com.pass.repository.pass;
 
-import com.pass.repository.BaseEntity;
+import com.pass.repository.booking.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
