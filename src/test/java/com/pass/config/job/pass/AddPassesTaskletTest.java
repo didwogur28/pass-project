@@ -1,5 +1,6 @@
 package com.pass.config.job.pass;
 
+import com.pass.job.pass.AddPassesTasklet;
 import com.pass.repository.pass.*;
 import com.pass.repository.user.UserGroupMappingEntity;
 import com.pass.repository.user.UserGroupMappingRepository;
