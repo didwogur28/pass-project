@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface StatisticsRepository extends JpaRepository<StatisticsEntity, Integer> {
 
-    @Query(value = "SELECT new AggregatedStatistics(s.statisticsAt, SUM(s.allCount), SUM(s.attendedCount), SUM(s.cancelledCount)) " +
+    @Query(value = "SELECT new com.pass.service.statistics.AggregatedStatistics(s.statisticsAt, SUM(s.allCount), SUM(s.attendedCount), SUM(s.cancelledCount)) " +
             "         FROM StatisticsEntity s " +
             "        WHERE s.statisticsAt BETWEEN :from AND :to " +
             "     GROUP BY s.statisticsAt")
