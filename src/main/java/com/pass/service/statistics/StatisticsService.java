@@ -17,7 +17,7 @@ public class StatisticsService {
         this.statisticsRepository = statisticsRepository;
     }
 
-    public Object makeChartData(LocalDateTime to) {
+    public ChartData makeChartData(LocalDateTime to) {
 
         final LocalDateTime from = to.minusDays(10);
 
